@@ -1,0 +1,5 @@
+export EZA_ICONS=Papirus
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+
