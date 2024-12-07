@@ -265,10 +265,10 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(sudo web-search dirhistory tmux)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+zinit light ohmyzsh/ohmyzsh
 
 . "$HOME/.atuin/bin/env"
 
