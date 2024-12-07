@@ -265,10 +265,9 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-#plugins=(sudo tmux)
+
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#zinit light ohmyzsh/ohmyzsh
 
 . "$HOME/.atuin/bin/env"
 
@@ -276,7 +275,7 @@ export _ZO_ECHO=1
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
-#eval "$(thefuck --alias)"
+eval "$(thefuck --alias)"
 
 # my aliases 
 source  ~/.zsh_aliases
@@ -297,10 +296,11 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-#zinit light ohmyzsh/ohmyzsh
+
 # Add in zsh plugins
 zinit light Aloxaf/fzf-tab
-plugins=(sudo tmux)
+plugins=(sudo tmux thefuck)
 zinit snippet OMZ::plugins/sudo
 zinit snippet OMZ::plugins/tmux
 zinit snippet OMZ::plugins/1password
+zinit snippet OMZ::plugins/thefuck
