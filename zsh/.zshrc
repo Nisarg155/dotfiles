@@ -265,10 +265,10 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-plugins=(sudo web-search dirhistory tmux)
+#plugins=(sudo tmux)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-zinit light ohmyzsh/ohmyzsh
+#zinit light ohmyzsh/ohmyzsh
 
 . "$HOME/.atuin/bin/env"
 
@@ -297,5 +297,10 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+#zinit light ohmyzsh/ohmyzsh
 # Add in zsh plugins
 zinit light Aloxaf/fzf-tab
+plugins=(sudo tmux)
+zinit snippet OMZ::plugins/sudo
+zinit snippet OMZ::plugins/tmux
+zinit snippet OMZ::plugins/1password
