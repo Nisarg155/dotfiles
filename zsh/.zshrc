@@ -299,8 +299,10 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in zsh plugins
 zinit light Aloxaf/fzf-tab
-plugins=(sudo tmux thefuck)
+plugins=(sudo tmux thefuck tldr bgnotify)
 zinit snippet OMZ::plugins/sudo
 zinit snippet OMZ::plugins/tmux
 zinit snippet OMZ::plugins/1password
 zinit snippet OMZ::plugins/thefuck
+zinit snippet OMZ::plugins/tldr
+zinit snippet OMZ::plugins/bgnotify
