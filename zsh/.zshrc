@@ -299,7 +299,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 
 
-# Bgnotify Configuration 
+# Bgnotify Configuration   
 bgnotify_threshold=12
 
 function bgnotify_formatted {
