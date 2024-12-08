@@ -291,6 +291,7 @@ source  ~/.zsh_exports
 # Load Angular CLI autocompletion.
 #source <(ng completion script)
 
+# Zinit Configuration and Sourcing 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
@@ -313,7 +314,7 @@ function bgnotify_formatted {
   bgnotify "$title - took ${elapsed}" "$2" "$icon"
 }
 
-# Add in zsh plugins
+# Add in zsh pluginis using zinit 
 zinit light Aloxaf/fzf-tab
 plugins=(sudo tmux thefuck tldr bgnotify)
 zinit snippet OMZ::plugins/sudo
