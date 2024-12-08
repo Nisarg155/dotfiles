@@ -297,6 +297,22 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 
+# Bgnotify Configuration 
+bgnotify_threshold=12
+
+function bgnotify_formatted {
+  ## $1=exit_status, $2=command, $3=elapsed_time
+
+  # Humanly readable elapsed time
+  local elapsed="$(( $3 % 60 ))s"
+  (( $3 < 60 ))   || elapsed="$((( $3 % 3600) / 60 ))m $elapsed"
+  (( $3 < 3600 )) || elapsed="$((  $3 / 3600 ))h $elapsed"
+
+  [ $1 -eq 0 ] && title="Successfully Executed" || title="Error in Execution"
+  [ $1 -eq 0 ] && icon="$HOME/.bgnotify/checked.png" || icon="$HOME/.bgnotify/cancel.png"
+  bgnotify "$title - took ${elapsed}" "$2" "$icon"
+}
+
 # Add in zsh plugins
 zinit light Aloxaf/fzf-tab
 plugins=(sudo tmux thefuck tldr bgnotify)
