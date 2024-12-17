@@ -315,6 +315,8 @@ function bgnotify_formatted {
   bgnotify "$title - took ${elapsed}" "$2" "$icon"
 }
 
+# fzf-git config source
+source ~/fzf-git.sh/fzf-git.sh
 # Add in zsh pluginis using zinit 
 zinit light Aloxaf/fzf-tab
 plugins=(sudo tmux thefuck tldr bgnotify)
@@ -324,3 +326,8 @@ zinit snippet OMZ::plugins/1password
 zinit snippet OMZ::plugins/thefuck
 zinit snippet OMZ::plugins/tldr
 zinit snippet OMZ::plugins/bgnotify
+
+
+# Removing locakfile to resolve readme errors 
+rm -rf ~/.cache/JetBrains/PyCharm2024.3/jcef_cache/Singleton*
+rm -rf ~/.cache/JetBrains/WebStorm2024.3/jcef_cache/Singleton*
