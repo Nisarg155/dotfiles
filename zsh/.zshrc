@@ -100,15 +100,13 @@ fi
 
 configure_prompt() {
     prompt_symbol=㉿
-    #prompt_symbol=🍷🍷🍷
-    # Skull emoji for root terminal
     [ "$EUID" -eq 0 ] && prompt_symbol=💀
 
-    # Function to get the current Git branch
+    # Function to get the current Git branch with Nerd Font icon
     git_branch() {
         local branch
         branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
-        [ -n "$branch" ] && echo "%F{yellow} $branch%f"
+        [ -n "$branch" ] && echo "%F{yellow}󰘬 $branch%f"  # Nerd Font Git branch icon
     }
 
     # Function to display the current time
@@ -119,8 +117,6 @@ configure_prompt() {
     case "$PROMPT_ALTERNATIVE" in
         twoline)
             PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}] $(git_branch)\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
-
-            # Right-side prompt with exit codes, background processes, and current time
             RPROMPT='$(current_time)'
             ;;
         oneline)
