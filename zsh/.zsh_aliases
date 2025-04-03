@@ -6,6 +6,4 @@ alias cat='bat'
 alias ls='eza --icons'
 alias rmt=" sh  /usr/bin/rmtrash"
 alias rmdirt="sh /usr/bin/rmdirtrash"
-alias speedtest="/home/nisarg/Documents/softwares/SpeedTest/speedtest"
-alias bucket="/home/nisarg/Documents/softwares/Buckets-linux-latest-amd64-0.75.0.AppImage"
-alias cryptomator="/home/nisarg/Downloads/software/cryptomator-1.14.2-x86_64.AppImage"
+alias speedtest="/home/nisarg/Softwares/SpeedTest/speedtest"
