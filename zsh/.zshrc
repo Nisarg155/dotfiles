@@ -2,7 +2,7 @@
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
 setopt autocd              # change directory just by typing its name
-#setopt correct            # auto correct mistakes
+setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
 setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch           # hide error message if there is no match for the pattern
@@ -342,3 +342,24 @@ zinit snippet OMZ::plugins/bgnotify
 # Removing locakfile to resolve readme errors 
 rm -rf ~/.cache/JetBrains/PyCharm2024.3/jcef_cache/Singleton*
 rm -rf ~/.cache/JetBrains/WebStorm2024.3/jcef_cache/Singleton*
+
+
+
+# Task Completion setting 
+# eval "$(go-task --completion zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nisarg/Softwares/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nisarg/Softwares/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nisarg/Softwares/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nisarg/Softwares/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
