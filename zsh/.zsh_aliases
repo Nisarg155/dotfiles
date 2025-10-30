@@ -8,5 +8,5 @@ alias rmt=" sh  /usr/bin/rmtrash"
 alias rmdirt="sh /usr/bin/rmdirtrash"
 alias speedtest="/home/nisarg/Softwares/SpeedTest/speedtest"
 alias task="go-task"
-
+alias conda-activate="source ~/Softwares/miniconda3/bin/activate"
 alias find="fd"

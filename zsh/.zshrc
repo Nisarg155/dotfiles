@@ -330,7 +330,7 @@ function bgnotify_formatted {
 source ~/fzf-git.sh/fzf-git.sh
 # Add in zsh pluginis using zinit 
 zinit light Aloxaf/fzf-tab
-plugins=(sudo tmux thefuck tldr bgnotify)
+plugins=(sudo tmux thefuck tldr bgnotify )
 zinit snippet OMZ::plugins/sudo
 zinit snippet OMZ::plugins/tmux
 zinit snippet OMZ::plugins/1password
@@ -344,22 +344,28 @@ rm -rf ~/.cache/JetBrains/PyCharm2024.3/jcef_cache/Singleton*
 rm -rf ~/.cache/JetBrains/WebStorm2024.3/jcef_cache/Singleton*
 
 
+# pastes welcome message on terminal on launch 
+echo "Welcome \n Nisarg !!" | figlet | lolcat  
 
 # Task Completion setting 
 # eval "$(go-task --completion zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/nisarg/Softwares/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/nisarg/Softwares/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/nisarg/Softwares/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/nisarg/Softwares/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#__conda_setup="$('/home/nisarg/Softwares/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#   eval "$__conda_setup"
+#else
+#    if [ -f "/home/nisarg/Softwares/miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/nisarg/Softwares/miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/nisarg/Softwares/miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
+
+# Setting ranger default config to false 
+RANGER_LOAD_DEFAULT_RC=false
+
 
